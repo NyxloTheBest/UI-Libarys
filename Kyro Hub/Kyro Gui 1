@@ -1,4 +1,9 @@
-
+--[[
+  UI lib made by bungie#0001
+  
+  - Please do not use this without permission, I am working really hard on this UI to make it perfect and do not have a big 
+    problem with other people using it, please just make sure you message me and ask me before using.
+]]
 
 -- / Locals
 local Workspace = game:GetService("Workspace")
@@ -75,7 +80,7 @@ end
 
 local library = {
     version = "2.0.2",
-    title = title or "Kyro Hub " .. tostring(math.random(1,366)),
+    title = title or "xsx " .. tostring(math.random(1,366)),
     fps = 0,
     rank = "private"
 }
@@ -321,7 +326,7 @@ function library:Watermark(text)
 
     local WatermarkFunctions = {}
     function WatermarkFunctions:AddWatermark(text)
-        tetx = text or "Kyro Hub"
+        tetx = text or "xsx v2"
 
         local edge = Instance.new("Frame")
         local edgeCorner = Instance.new("UICorner")
@@ -347,6 +352,15 @@ function library:Watermark(text)
         edgeCorner.CornerRadius = UDim.new(0, 2)
         edgeCorner.Name = "edgeCorner"
         edgeCorner.Parent = edge
+    
+        background.Name = "background"
+        background.Parent = edge
+        background.AnchorPoint = Vector2.new(0.5, 0.5)
+        background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        background.BackgroundTransparency = 1
+        background.ClipsDescendants = true
+        background.Position = UDim2.new(0.5, 0, 0.5, 0)
+        background.Size = UDim2.new(0, 0, 0, 24)
     
         barFolder.Name = "barFolder"
         barFolder.Parent = background
@@ -683,18 +697,81 @@ function library:Introduction()
     local xsx = Instance.new("TextLabel")
     local text = Instance.new("TextLabel")
     local pageLayout = Instance.new("UIListLayout")
+    local loadingText = Instance.new("TextLabel")
+    
+    introduction.Name = "introduction"
+    introduction.Parent = CoreGuiService
+    introduction.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    
+    edge.Name = "edge"
+    edge.Parent = introduction
+    edge.AnchorPoint = Vector2.new(0.5, 0.5)
+    edge.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    edge.BackgroundTransparency = 1
+    edge.Position = UDim2.new(0.511773348, 0, 0.5, 0)
+    edge.Size = UDim2.new(0, 300, 0, 308)
+    
+    edgeCorner.CornerRadius = UDim.new(0, 2)
+    edgeCorner.Name = "edgeCorner"
+    edgeCorner.Parent = edge
+    
+    background.Name = "background"
+    background.Parent = edge
+    background.AnchorPoint = Vector2.new(0.5, 0.5)
+    background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    background.BackgroundTransparency = 1
+    background.ClipsDescendants = true
+    background.Position = UDim2.new(0.5, 0, 0.5, 0)
+    background.Size = UDim2.new(0, 298, 0, 306)
+    
+    backgroundGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(34, 34, 34)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(28, 28, 28))}
+    backgroundGradient.Rotation = 90
+    backgroundGradient.Name = "backgroundGradient"
+    backgroundGradient.Parent = background
+    
+    backgroundCorner.CornerRadius = UDim.new(0, 2)
+    backgroundCorner.Name = "backgroundCorner"
+    backgroundCorner.Parent = background
+    
+    barFolder.Name = "barFolder"
+    barFolder.Parent = background
+    
+    bar.Name = "bar"
+    bar.Parent = barFolder
+    bar.BackgroundColor3 = Color3.fromRGB(159, 115, 255)
+    bar.BackgroundTransparency = 0.200
+    bar.Size = UDim2.new(0, 0, 0, 1)
+    
+    barCorner.CornerRadius = UDim.new(0, 2)
+    barCorner.Name = "barCorner"
+    barCorner.Parent = bar
+    
+    barLayout.Name = "barLayout"
+    barLayout.Parent = barFolder
+    barLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    barLayout.SortOrder = Enum.SortOrder.LayoutOrder
     
 
-    
-    
-    
-    xsx.Name = "KyroHub"
+loadingText.Name = "LoadingText"
+loadingText.Parent = background
+loadingText.AnchorPoint = Vector2.new(0.5, 0.5)
+loadingText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+loadingText.BackgroundTransparency = 1.0
+loadingText.Position = UDim2.new(0.5, 0, 0.5, 0)
+loadingText.Size = UDim2.new(0, 300, 0, 100)
+loadingText.Font = Enum.Font.SourceSansBold
+loadingText.Text = "Loading Script, Please Wait"
+loadingText.TextColor3 = Color3.fromRGB(159, 115, 255)
+loadingText.TextScaled = true
+loadingText.Visible = true
+
+    xsx.Name = "xsx"
     xsx.Parent = background
     xsx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     xsx.BackgroundTransparency = 1.000
     xsx.Size = UDim2.new(0, 80, 0, 21)
     xsx.Font = Enum.Font.Code
-    xsx.Text = "powered by Kyro Hub"
+    xsx.Text = "By Nyxlo"
     xsx.TextColor3 = Color3.fromRGB(124, 124, 124)
     xsx.TextSize = 10.000
     xsx.TextTransparency = 1
