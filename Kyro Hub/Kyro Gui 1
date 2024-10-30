@@ -1,3 +1,9 @@
+--[[
+  UI lib made by bungie#0001
+  
+  - Please do not use this without permission, I am working really hard on this UI to make it perfect and do not have a big 
+    problem with other people using it, please just make sure you message me and ask me before using.
+]]
 
 -- / Locals
 local Workspace = game:GetService("Workspace")
@@ -19,17 +25,7 @@ local TweenTable = {
         TweenInfo.new(0.17, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
     }
 }
-local CreateTween = function(name, speed, style, direction, loop, reverse, delay)
-    name = name
-    speed = speed or 0.17
-    style = style or Enum.EasingStyle.Sine
-    direction = direction or Enum.EasingDirection.InOut
-    loop = loop or 0
-    reverse = reverse or false
-    delay = delay or 0
 
-    TweenTable[name] = TweenInfo.new(speed, style, direction, loop, reverse, delay)
-end
 
 -- / Dragging
 local drag = function(obj, latency)
@@ -744,17 +740,37 @@ function library:Introduction()
     barLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
     barLayout.SortOrder = Enum.SortOrder.LayoutOrder
     
-
+    xsxLogo.Name = "xsxLogo"
+    xsxLogo.Parent = background
+    xsxLogo.AnchorPoint = Vector2.new(0.5, 0.5)
+    xsxLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    xsxLogo.BackgroundTransparency = 1.000
+    xsxLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
+    xsxLogo.Size = UDim2.new(0, 448, 0, 150)
+    xsxLogo.Visible = true
+    xsxLogo.Image = "http://www.roblox.com/asset/?id=9365068051"
+    xsxLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
+    xsxLogo.ImageTransparency = 1
     
-
+    hashLogo.Name = "hashLogo"
+    hashLogo.Parent = background
+    hashLogo.AnchorPoint = Vector2.new(0.5, 0.5)
+    hashLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    hashLogo.BackgroundTransparency = 1.000
+    hashLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
+    hashLogo.Size = UDim2.new(0, 150, 0, 150)
+    hashLogo.Visible = true
+    hashLogo.Image = "http://www.roblox.com/asset/?id=9365069861"
+    hashLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
+    hashLogo.ImageTransparency = 1
     
-    xsx.Name = "Kyro Hub"
+    xsx.Name = "xsx"
     xsx.Parent = background
     xsx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     xsx.BackgroundTransparency = 1.000
     xsx.Size = UDim2.new(0, 80, 0, 21)
     xsx.Font = Enum.Font.Code
-    xsx.Text = "powered by Nyxlo"
+    xsx.Text = "powered by xsx"
     xsx.TextColor3 = Color3.fromRGB(124, 124, 124)
     xsx.TextSize = 10.000
     xsx.TextTransparency = 1
@@ -1022,7 +1038,19 @@ function library:Init(key)
         tabButton.TextSize = 15.000
         tabButton.RichText = true
 
-
+        page.Name = "page"
+        page.Parent = container
+        page.Active = true
+        page.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        page.BackgroundTransparency = 1.000
+        page.BorderSizePixel = 0
+        page.Size = UDim2.new(0, 412, 0, 358)
+        page.BottomImage = "http://www.roblox.com/asset/?id=3062506202"
+        page.MidImage = "http://www.roblox.com/asset/?id=3062506202"
+        page.ScrollBarThickness = 1
+        page.TopImage = "http://www.roblox.com/asset/?id=3062506202"
+        page.ScrollBarImageColor3 = Color3.fromRGB(159, 115, 255)
+        page.Visible = false
         
         pageLayout.Name = "pageLayout"
         pageLayout.Parent = page
