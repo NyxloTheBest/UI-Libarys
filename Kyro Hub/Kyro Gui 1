@@ -771,12 +771,8 @@ loadingText.TextScaled = true
 loadingText.TextWrapped = true
 
 
-gradient.Parent = loadingText
-gradient.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 0, 255)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 255))
-}
-gradient.Rotation = 45
+
+
 
     xsx.Name = "xsx"
     xsx.Parent = background
