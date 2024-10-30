@@ -698,6 +698,7 @@ function library:Introduction()
     local text = Instance.new("TextLabel")
     local pageLayout = Instance.new("UIListLayout")
     local loadingText = Instance.new("TextLabel")
+    local gradient = Instance.new("UIGradient")
     
     introduction.Name = "introduction"
     introduction.Parent = CoreGuiService
@@ -750,7 +751,6 @@ function library:Introduction()
     barLayout.Parent = barFolder
     barLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
     barLayout.SortOrder = Enum.SortOrder.LayoutOrder
-    
 
 loadingText.Name = "LoadingText"
 loadingText.Parent = background
@@ -758,12 +758,25 @@ loadingText.AnchorPoint = Vector2.new(0.5, 0.5)
 loadingText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 loadingText.BackgroundTransparency = 1.0
 loadingText.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingText.Size = UDim2.new(0, 300, 0, 100)
-loadingText.Font = Enum.Font.SourceSansBold
-loadingText.Text = "Loading Script, Please Wait"
+loadingText.Size = UDim2.new(0, 400, 0, 100)
+
+-- Font and Styling
+loadingText.Font = Enum.Font.GothamBlack
+loadingText.Text = "Loading Script, Please Wait..."
 loadingText.TextColor3 = Color3.fromRGB(159, 115, 255)
+loadingText.TextStrokeColor3 = Color3.fromRGB(75, 42, 127)
+loadingText.TextStrokeTransparency = 0.2  -- Adds a subtle stroke for a glowing effect
+loadingText.TextSize = 50  -- Larger font size for emphasis
 loadingText.TextScaled = true
-loadingText.Visible = true
+loadingText.TextWrapped = true
+
+
+gradient.Parent = loadingText
+gradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 115, 255)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(159, 115, 255))
+}
+gradient.Rotation = 45
 
     xsx.Name = "xsx"
     xsx.Parent = background
