@@ -766,7 +766,7 @@ loadingText.Text = "Loading Script, Please Wait..."
 loadingText.TextColor3 = Color3.fromRGB(159, 115, 255)
 loadingText.TextStrokeColor3 = Color3.fromRGB(75, 42, 127)
 loadingText.TextStrokeTransparency = 0.2  -- Adds a subtle stroke for a glowing effect
-loadingText.TextSize = 50  -- Larger font size for emphasis
+loadingText.TextSize = 25  -- Larger font size for emphasis
 loadingText.TextScaled = true
 loadingText.TextWrapped = true
 
