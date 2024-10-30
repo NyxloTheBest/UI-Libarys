@@ -758,12 +758,12 @@ loadingText.AnchorPoint = Vector2.new(0.5, 0.5)
 loadingText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 loadingText.BackgroundTransparency = 1.0
 loadingText.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingText.Size = UDim2.new(0, 400, 0, 100)
+loadingText.Size = UDim2.new(0, 250, 0, 50)
 
 -- Font and Styling
 loadingText.Font = Enum.Font.GothamBlack
 loadingText.Text = "Loading Script, Please Wait..."
-loadingText.TextColor3 = Color3.fromRGB(159, 115, 255)
+loadingText.TextColor3 = Color3.fromRGB(0, 0, 255)
 loadingText.TextStrokeColor3 = Color3.fromRGB(75, 42, 127)
 loadingText.TextStrokeTransparency = 0.2  -- Adds a subtle stroke for a glowing effect
 loadingText.TextSize = 25  -- Larger font size for emphasis
