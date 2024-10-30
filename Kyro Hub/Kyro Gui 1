@@ -709,41 +709,6 @@ function library:Introduction()
     edgeCorner.Name = "edgeCorner"
     edgeCorner.Parent = edge
     
-    background.Name = "background"
-    background.Parent = edge
-    background.AnchorPoint = Vector2.new(0.5, 0.5)
-    background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    background.BackgroundTransparency = 1
-    background.ClipsDescendants = true
-    background.Position = UDim2.new(0.5, 0, 0.5, 0)
-    background.Size = UDim2.new(0, 298, 0, 306)
-    
-    backgroundGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(34, 34, 34)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(28, 28, 28))}
-    backgroundGradient.Rotation = 90
-    backgroundGradient.Name = "backgroundGradient"
-    backgroundGradient.Parent = background
-    
-    backgroundCorner.CornerRadius = UDim.new(0, 2)
-    backgroundCorner.Name = "backgroundCorner"
-    backgroundCorner.Parent = background
-    
-    barFolder.Name = "barFolder"
-    barFolder.Parent = background
-    
-    bar.Name = "bar"
-    bar.Parent = barFolder
-    bar.BackgroundColor3 = Color3.fromRGB(159, 115, 255)
-    bar.BackgroundTransparency = 0.200
-    bar.Size = UDim2.new(0, 0, 0, 1)
-    
-    barCorner.CornerRadius = UDim.new(0, 2)
-    barCorner.Name = "barCorner"
-    barCorner.Parent = bar
-    
-    barLayout.Name = "barLayout"
-    barLayout.Parent = barFolder
-    barLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-    barLayout.SortOrder = Enum.SortOrder.LayoutOrder
     
     
     xsx.Name = "KyroHub"
